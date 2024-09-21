@@ -15,16 +15,16 @@ def submit():
     health_condition = request.form['health_condition']
     daily_calories = int(request.form['daily_calories'])
 
-    # Database connection and data insertion
+    
     connection, cursor = connect_db()
     insert_user_profile(cursor, name, age, health_condition, daily_calories)
     connection.commit()
 
-    # Fetch recommendations based on health condition
+    
     foods = fetch_food_items(cursor, health_condition)
     connection.close()
 
-    # Pass recommended foods to the result page
+
     return render_template('result.html', foods=foods, health_condition=health_condition)
 
 if __name__ == "__main__":

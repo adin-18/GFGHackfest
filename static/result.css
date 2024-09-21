@@ -1,22 +1,22 @@
 /* Base Styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #e8f5e9; /* Soft green for health and food */
+    background-color: #e8f5e9; 
     margin: 0;
     padding: 20px;
     color: #333;
 }
 
 h1 {
-    color: #2e7d32; /* Dark green for headings */
+    color: #2e7d32; 
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
-/* Disease Description Styling */
+
 .description {
-    background-color: #f1f8e9; /* Light green background */
+    background-color: #f1f8e9; 
     border-left: 5px solid #66bb6a;
     padding: 15px;
     margin-bottom: 30px;
@@ -24,7 +24,6 @@ h1 {
     line-height: 1.5;
 }
 
-/* Table Styling */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -33,7 +32,7 @@ table {
 }
 
 thead {
-    background-color: #66bb6a; /* Vibrant green */
+    background-color: #66bb6a; 
     color: white;
 }
 
@@ -55,11 +54,11 @@ tbody tr:hover {
     background-color: #e8f5e9;
 }
 
-/* Link Styling */
+
 .back-link {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #43a047; /* Deeper green */
+    background-color: #43a047; 
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -71,10 +70,10 @@ tbody tr:hover {
 .back-link:hover {
     background-color: #388e3c;
 }
-/* Health Condition Description Styling */
+
 .description {
     margin-top: 20px;
-    background-color: #f1f8e9; /* Light green background */
+    background-color: #f1f8e9; 
     border-left: 5px solid #66bb6a;
     padding: 15px;
     font-size: 1.2rem;

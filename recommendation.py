@@ -1,7 +1,6 @@
 from models import fetch_food_items
 
 def recommend_meal(cursor, health_condition):
-    # Fetch food items suitable for the user's health condition
     foods = fetch_food_items(cursor, health_condition)
 
     print(f"Recommended meals for {health_condition}:")
