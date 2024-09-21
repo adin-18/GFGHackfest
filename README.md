@@ -12,9 +12,12 @@ Calorie Management: The system provides meal recommendations based on the user's
 Dynamic Database: A structured SQL database to store and manage user profiles and food information.
 
 Technologies Used
-Backend: Python with Flask framework
+Backend: Python with Flask framework  
+
 Database: MySQL (or any compatible SQL database)
+
 Frontend: HTML, CSS, and JavaScript
+
 Getting Started
 To run this project locally:
 
