@@ -1,0 +1,119 @@
+/* Base Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e8f5e9; /* Soft green for health and food */
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+h1 {
+    color: #2e7d32; /* Dark green for headings */
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Disease Description Styling */
+.description {
+    background-color: #f1f8e9; /* Light green background */
+    border-left: 5px solid #66bb6a;
+    padding: 15px;
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+thead {
+    background-color: #66bb6a; /* Vibrant green */
+    color: white;
+}
+
+thead th {
+    padding: 12px;
+    text-align: left;
+}
+
+tbody td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #e8f5e9;
+}
+
+/* Link Styling */
+.back-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #43a047; /* Deeper green */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-link:hover {
+    background-color: #388e3c;
+}
+/* Health Condition Description Styling */
+.description {
+    margin-top: 20px;
+    background-color: #f1f8e9; /* Light green background */
+    border-left: 5px solid #66bb6a;
+    padding: 15px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.description h2 {
+    color: #2e7d32; /* Dark green */
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.description p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+    }
+
+    tbody td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    tbody td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+}

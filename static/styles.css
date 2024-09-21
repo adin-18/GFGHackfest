@@ -1,0 +1,174 @@
+/* Base Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e8f5e9; /* Soft green for health and food */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1 {
+    color: #2e7d32; /* Dark green for headings */
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+/* Ensure elements are sized properly */
+* {
+    box-sizing: border-box;
+}
+
+/* Responsive Navigation Bar */
+.navbar {
+    background-color: #66bb6a; /* Vibrant green for health theme */
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+
+.navbar-logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.navbar ul li a:hover {
+    color: #dcedc8; /* Lighter green hover effect */
+}
+
+/* Hamburger Menu (for small screens) */
+.navbar .menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive Design for small screens */
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #66bb6a;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    .navbar ul li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .navbar ul li a {
+        font-size: 1.2rem;
+        padding: 10px;
+        display: block;
+        width: 100%;
+    }
+
+    .navbar.active ul {
+        display: flex;
+    }
+
+    .navbar .menu-toggle {
+        display: block;
+    }
+}
+
+/* Form Styling */
+form {
+    width: 50%;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures equal spacing between inputs */
+    min-height: 70vh; /* Reduced height to avoid scrolling */
+}
+
+label, input, select {
+    font-size: 1.1rem;
+    margin-bottom: 10px; /* Adjusted spacing between elements */
+}
+
+input, select {
+    padding: 10px;
+    border: 2px solid #66bb6a;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #43a047; /* Deeper green */
+    color: white;
+    padding: 12px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #388e3c; /* Slightly darker hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    form {
+        width: 90%;
+        min-height: auto; /* Remove height constraint for mobile view */
+    }
+}
+
+/* Footer Styling */
+footer {
+    background-color: #66bb6a; /* Matching green theme */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: auto; /* Pushes footer to bottom */
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+footer a {
+    color: #dcedc8; /* Lighter green for links */
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: white;
+}

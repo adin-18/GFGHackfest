@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+    <title>Diet Recommendations</title>
+</head>
+<body>
+    <h1>Diet Recommendations for {{ health_condition }}</h1>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Food</th>
+                <th>Calories</th>
+                <th>Protein (g)</th>
+                <th>Fat (g)</th>
+                <th>Carbs (g)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for food in foods %}
+            <tr>
+                <td>{{ food[1] }}</td>
+                <td>{{ food[2] }}</td>
+                <td>{{ food[3] }}</td>
+                <td>{{ food[4] }}</td>
+                <td>{{ food[5] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    <div class="description">
+        <h2>About {{ health_condition }}</h2>
+        <p>
+            {% if health_condition == 'Diabetes' %}
+                Diabetes is a condition characterized by high blood sugar levels due to the body's inability to produce or properly use insulin. Managing diabetes involves controlling carbohydrate intake, maintaining a balanced diet, and monitoring blood sugar levels.
+            {% elif health_condition == 'Hypertension' %}
+                Hypertension, also known as high blood pressure, increases the risk of heart disease, stroke, and other health problems. A diet rich in fruits, vegetables, and low-sodium foods is recommended to manage hypertension.
+            {% elif health_condition == 'Obesity' %}
+                Obesity occurs when excess body fat has accumulated to the extent that it may harm health. A balanced, nutrient-dense diet low in calories and fats is important for managing obesity and promoting weight loss.
+            {% elif health_condition == 'Anemia' %}
+                Anemia is a condition where the body lacks enough healthy red blood cells to carry adequate oxygen to the tissues. Eating iron-rich foods and foods high in vitamin C to aid iron absorption is key to managing anemia.
+            {% endif %}
+        </p>
+    </div>
+
+    <a href="/" class="back-link">Go Back</a>
+</body>
+</html>

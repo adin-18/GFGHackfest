@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Nutrition and Diet Recommendation</title>
+</head>
+<body>
+    <!-- Responsive Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-logo">Nutrition & Diet</div>
+        <span class="menu-toggle">&#9776;</span> <!-- Hamburger icon -->
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <h1>Welcome to the Nutrition and Diet Recommendation System</h1>
+
+    <form action="/submit" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br>
+
+        <label for="health_condition">Select your health condition:</label>
+        <select id="health_condition" name="health_condition" required>
+            <option value="Diabetes">Diabetes</option>
+            <option value="Hypertension">Hypertension</option>
+            <option value="Obesity">Obesity</option>
+            <option value="Anemia">Anemia</option>
+        </select><br>
+
+        <label for="daily_calories">Daily Calorie Requirement:</label>
+        <input type="number" id="daily_calories" name="daily_calories" required><br>
+
+        <input type="submit" value="Get Recommendations">
+    </form>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Nutrition & Diet Recommendation System</p>
+        <p><a href="#contact">Contact Us</a></p>
+    </footer>
+
+    <script>
+        // Toggle for mobile nav
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.navbar').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
